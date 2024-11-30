@@ -1,0 +1,1 @@
+# ready for AoC 2024 day 1.
