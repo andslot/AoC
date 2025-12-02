@@ -31,14 +31,11 @@ def part2(input_file: str):
         for n in range(r[0], r[1] + 1):
             n_len = len(str(n))
 
-            for i in range(1, n_len):
-                # check substring repeatings
-                if str(n)[:i] * (n_len // i) == str(n):
-                    invalid_password += n
-                    break
+            if (str(n) + str(n)).find(str(n), 1) != n_len:
+                invalid_password += n
 
     print(invalid_password)
 
 if __name__ == "__main__":
     part1('./day2/input.txt')
-    part2('./day2/input.txt')
+    part2('./day2/test_input.txt')
